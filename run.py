@@ -39,6 +39,7 @@ def get(id,handle=None):
                         old = result['oldRating']
                         new = result['newRating']
                         print(f'gain : {new-old}\n{old} -> {new}')
+                        break
                 else:
                     print(f'couldn\'t find this handle ->{handle}')
             quit()
