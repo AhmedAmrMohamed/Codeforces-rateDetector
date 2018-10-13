@@ -1,3 +1,3 @@
-import cfrate
+from cfrate import *
 def main():
-    cfrate.main()
+    cfmain()

@@ -1,7 +1,9 @@
 README.md
 setup.py
 cfrate/__init__.py
+cfrate/getinp.py
 cfrate/run.py
+cfrate/ts.py
 cfrate.egg-info/PKG-INFO
 cfrate.egg-info/SOURCES.txt
 cfrate.egg-info/dependency_links.txt

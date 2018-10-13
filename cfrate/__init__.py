@@ -1,16 +1,19 @@
 #BY : theUnderdog
 #-----------------
-def main():
-##settings
-    file = 'so.mp3' #the name of the file to played as an alert.
-    secs = 120      #the number of seconds between each request.
-    ##end of settings
+
+def cfmain():
     import requests
     from time import sleep,ctime
     import os
-    id=os.sys.argv[1]  #contest ID
-    url  = f'http://codeforces.com/api/contest.ratingChanges?contestId={id}'
     import sys
+    print('working')
+    print(getinp.__file__)
+    quit()
+    file,secs,path = getinp.load()
+    id=os.sys.argv[1]  #contest ID
+    if(id=='*' or not all(file,secs,path)):
+        getinp.get()
+    url  = f'http://codeforces.com/api/contest.ratingChanges?contestId={id}'
     def progress(count, total, status=''):
         bar_len = 60
         filled_len = int(round(bar_len * count / float(total)))

@@ -16,6 +16,7 @@ Description: # Codeforces-rateDetector
         <ol>
         <li><code>pip install cfrate</code></li>
         <li><code>cfrate [contest-id] [handle(optional)]</code></li>
+        <li>example</li><br>cfrate 1066 theunderdog</li>
         </ol>
         </dd>
         <dl>not-so-easy way (clone)</dl>
