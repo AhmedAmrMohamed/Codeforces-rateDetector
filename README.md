@@ -1,6 +1,6 @@
 # Codeforces-rateDetector
 play a file sound - song- once the rating changes at all the participants  of some round. Also if a handle was given the program will output the the changes to that handle
-<h4>This is only working on windows; However line 35 can be tweaked to work on linux - I just don't know how 🤷‍♂️ -
+<h4>This is only working on windows; However line 35 can be tweaked to work on linux - I just don't know how ¯\_O_/¯ -</h4>
 <h3>How to use:<h3/>
 <ol>
 <li>navigate to the folder that contain this script</li>
