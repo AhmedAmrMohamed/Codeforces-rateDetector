@@ -1,13 +1,9 @@
 README.md
 setup.py
 cfrate/__init__.py
-<<<<<<< HEAD
-cfrate/getinp.py
-cfrate/run.py
-cfrate/ts.py
-=======
 cfrate/command.py
->>>>>>> parent of 9d36624... v 0.1.0
+cfrate/getinp.py
+cfrate/ts.py
 cfrate.egg-info/PKG-INFO
 cfrate.egg-info/SOURCES.txt
 cfrate.egg-info/dependency_links.txt

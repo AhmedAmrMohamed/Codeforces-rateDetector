@@ -6,13 +6,14 @@ def cfmain():
     from time import sleep,ctime
     import os
     import sys
-    print('working')
-    print(getinp.__file__)
-    quit()
-    file,secs,path = getinp.load()
+    from cfrate import getinp
+    inp = getinp.Getinp(getinp.__file__)
+    secs = 120
+    file = inp.readinp()
     id=os.sys.argv[1]  #contest ID
-    if(id=='*' or not all(file,secs,path)):
-        getinp.get()
+    if id=='*' or not file:
+        file = inp.writeinp()
+        quit()
     url  = f'http://codeforces.com/api/contest.ratingChanges?contestId={id}'
     def progress(count, total, status=''):
         bar_len = 60
