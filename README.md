@@ -16,6 +16,6 @@ play a file sound - song- once the rating changes at all the participants  of so
 <h3>Examples</h3>
 <code>cfrate 1066</code><br>
 <code>cfrate 1066 theunderdog</code><br>
-<code>cfrate *</code>
+<code>cfrate -1</code>
 
     
