@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="cfrate",
-    version="0.0.5",
+    version="2.0.0",
     author="theunderdog",
     author_email="ahmedbonumstelio@gmail.com",
     description="play a file sound - song- once the rating changes at all the participants  of some round. Also if a handle was given the program will output the the changes to that handle",
@@ -16,7 +16,7 @@ setuptools.setup(
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
-        "Operating System :: OS Independent",
+        "Operating System :: MSWINDOWS",
     ],
     entry_points = {
         'console_scripts':['cfrate=cfrate.command:main']
