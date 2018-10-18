@@ -22,20 +22,29 @@ class Getinp:
             os.chdir(self.pkpath)
             fi = open('settings.txt' , 'r')
             filepath = fi.read()
+            print(f'file {filepath}')
             # filepath = self.parseline()
             if not len(filepath):
-                return None
+                return print('file is empty')
             return filepath
-        except Exception:
-            print('wrong')
+        except Exception as xe:
+            print('ex',xe)
             return None
 
     def writeinp(self):
         '''get the song file and write it to the settings.txt file'''
         os.chdir(self.pkpath)
         fi = open('settings.txt','w')
+        # filepath = self.getsong(input('Enter the path to this song: '))
         filepath = input('Enter the path to this song: ')
+        print(filepath)
         print('The program will terminat now, run it again this time with the contest ID (and the handle is optional)')
-        print(filepath,file = fi)
         fi.close()
         return filepath
+
+    def getsong(self,path):
+        for dir in os.listdir(path):
+            if '.mp3' or '.mp4' in dir:
+                print(path+'\\'+dir)
+                return path+'\\'+dir
+        return None

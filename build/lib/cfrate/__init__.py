@@ -1,19 +1,19 @@
 #BY : theUnderdog
 #-----------------
-
 def cfmain():
     import requests
     from time import sleep,ctime
     import os
     import sys
-    from cfrate import getinp
-    inp = getinp.Getinp(getinp.__file__)
-    secs = 120
-    file = inp.readinp()
+    from cfrate import filehandles
+    # from cfrate import getinp
+    handleobj = filehandles.FileHandler(filehandles.__file__)
+    secs      = 120
+    file      = handleobj.core()
     id=os.sys.argv[1]  #contest ID
-    if id=='*' or not file:
-        file = inp.writeinp()
-        quit()
+    if id=='*':
+        handleobj.core(True)
+
     url  = f'http://codeforces.com/api/contest.ratingChanges?contestId={id}'
     def progress(count, total, status=''):
         bar_len = 60

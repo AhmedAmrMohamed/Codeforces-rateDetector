@@ -2,6 +2,7 @@ README.md
 setup.py
 cfrate/__init__.py
 cfrate/command.py
+cfrate/filehandles.py
 cfrate/getinp.py
 cfrate/ts.py
 cfrate.egg-info/PKG-INFO
