@@ -17,6 +17,5 @@ play a file sound - song- once the rating changes at all the participants  of so
 <code>cfrate 1066</code><br>
 <code>cfrate 1066 theunderdog</code><br>
 <code>cfrate *</code>
-README.md
 
     
