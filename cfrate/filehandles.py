@@ -1,7 +1,8 @@
 import os
 import time
 def track(fun):
-        print(fun.__name__)
+        # print(fun.__name__)
+        pass
 class FileHandler:
     def __init__(self,path):
         path = path.split('\\')
@@ -38,7 +39,11 @@ class FileHandler:
         self.folderpath = f'{self.path}\\{self.foldername}'
         fp=self.folderpath
         if self.checkPath(fp) and not add:
-            so = self.getsong(fp)
+            os.chdir(fp)
+            oso = self.getsong(fp)
+            so = ''.join(oso.split())
+            os.rename(oso,so)
+            print(f'file to be played {so}')
             if so:
                 return so
             else:

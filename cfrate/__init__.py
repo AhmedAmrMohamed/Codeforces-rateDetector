@@ -11,9 +11,13 @@ def cfmain():
     secs      = 120
     file      = handleobj.core()
     id=os.sys.argv[1]  #contest ID
-    if id=='*':
+    os.chdir(handleobj.path)
+    # print(os.getcwd())
+    print(id)
+    if id=='-1':
+        print('id')
         handleobj.core(True)
-
+        quit()
     url  = f'http://codeforces.com/api/contest.ratingChanges?contestId={id}'
     def progress(count, total, status=''):
         bar_len = 60
@@ -36,6 +40,7 @@ def cfmain():
             res = requests.get(url).json()
             if res['status']!='FAILED' and len(res['result']):
                 ## for linux this should be changed to the right command -which I don't know
+                os.chdir(handleobj.folderpath)
                 os.system(f'start {file}')
                 if handle:
                     for result in res['result']:

@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="cfrate",
-    version="2.0.1",
+    version="2.0.3",
     author="theunderdog",
     author_email="ahmedbonumstelio@gmail.com",
     description="play a file sound - song- once the rating changes at all the participants  of some round. Also if a handle was given the program will output the the changes to that handle",
