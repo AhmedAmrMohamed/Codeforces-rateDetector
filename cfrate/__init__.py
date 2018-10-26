@@ -6,14 +6,14 @@ def cfmain():
     import os
     import sys
     from cfrate import filehandles
-    # from cfrate import getinp
-    handleobj = filehandles.FileHandler(filehandles.__file__)
+
+    path      = os.path.pathabs(__file__)
     secs      = 120
     file      = handleobj.core()
-    id=os.sys.argv[1]  #contest ID
-    os.chdir(handleobj.path)
-    # print(os.getcwd())
-    print(id)
+    id        =os.sys.argv[1]  #contest ID
+    os.chdir(path)
+
+    handleobj = filehandles.FileHandler(path)
     if id=='-1':
         print('id')
         handleobj.core(True)
@@ -64,3 +64,4 @@ def cfmain():
         get(id,handle)
     else:
         get(id)
+
