@@ -14,9 +14,8 @@ play a file sound - song- once the rating changes at all the participants  of so
     <p>simply move/copy the media file into that folder and run the program again</p>
     <If you want to change the media file type in <code>cfrate *</code><br>
 <h3>Examples</h3>
-<code>cfrate 1066</h3><br>
-<code>cfrate 1066 theunderdog</h3><br>
+<code>cfrate 1066</code><br>
+<code>cfrate 1066 theunderdog</code><br>
 <code>cfrate *</code>
-README.md
 
     
