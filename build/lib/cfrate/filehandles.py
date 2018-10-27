@@ -1,8 +1,6 @@
 import os
 import time
-def track(fun):
-        # print(fun.__name__)
-        pass
+from cfrate import cfrate
 class FileHandler:
     def __init__(self,path):
         path = path.split('\\')
@@ -14,11 +12,11 @@ class FileHandler:
 
 
     def checkPath(self,path):
-        track(self.checkPath)
+        ##track(self.checkPath)
         return os.path.isdir(path)
 
     def getsong(self,path):
-        track(self.getsong)
+        ##track(self.getsong)
         for fi in os.listdir(path):
             for ext in self.validextentios:
                 if fi.endswith(ext):
@@ -27,15 +25,15 @@ class FileHandler:
             return False
             # raise Exception "no file not found"
     def createFolder(self):
-        track(self.createFolder)
+        ##track(self.createFolder)
         os.mkdir(self.folderpath)
 
     def openFolder(self):
-        track(self.openFolder)
+        ##track(self.openFolder)
         os.system(f'explorer {self.folderpath}')
 
     def core(self,add = False):
-        track(self.core)
+        ##track(self.core)
         self.folderpath = f'{self.path}\\{self.foldername}'
         fp=self.folderpath
         if self.checkPath(fp) and not add:
@@ -63,13 +61,25 @@ class FileHandler:
             self.openFolder()
             quit()
 
+class main_class(cfrate):
+    def __init__(self):
+        print('cf')
+        super().__init__()
 
+    def setup(self):
+        self.fhandle = FileHandler(self.path)
+        os.chdir(self.fhandle.path)
+        self.mediafile = self.fhandle.core()
 
+    def change(self):
+        print('changeing...')
+        self.fhandle.core(True)
+        quit()
 
-
-
-
-
+    def do(self):
+        os.system(f"start {self.mediafile}")
+def main():
+    main_class()
 
 
 
