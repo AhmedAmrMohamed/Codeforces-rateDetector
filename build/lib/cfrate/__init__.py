@@ -8,7 +8,7 @@ class cfrate:
         self.path   = os.path.abspath(__file__)
         self.secs   = 120
         self.id     = os.sys.argv[1]
-        self.url    = f'http://codeforces.com/api/contest.ratingChanges?contestId={self.id}'
+        self.__url    = f'http://codeforces.com/api/contest.ratingChanges?contestId={self.id}'
         self.handle = None
         if len(os.sys.argv)==3:
             self.handle = os.sys.argv[2].lower()
@@ -63,7 +63,7 @@ class cfrate:
         '''
         try:
             print(f'sending {self.id}, {self.handle if self.handle else ""} , {ctime()} ...')
-            res = requests.get(self.url).json()
+            res = requests.get(self.__url).json()
             if res['status']!='FAILED' and len(res['result']):
                 self.do()
                 if self.handle:
@@ -81,6 +81,6 @@ class cfrate:
                 self.progress(i, self.secs, status='Before next Request')
             self.get()
         except Exception as ex:
-            print('wrong ', ex)
-            self.get()
+            print('cfrate wrong', ex)
+            # self.get()
 

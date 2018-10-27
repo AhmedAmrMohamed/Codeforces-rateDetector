@@ -1,4 +1,4 @@
-Metadata-Version: 2.1
+Metadata-Version: 1.1
 Name: cfrate
 Version: 2.1.7
 Summary: play a file sound - song- once the rating changes at all the participants  of some round. Also if a handle was given the program will output the the changes to that handle
@@ -9,7 +9,7 @@ License: UNKNOWN
 Description: # Codeforces-rateDetector
         play a file sound - song- once the rating changes at all the participants  of some round. Also if a handle was given the program will output the the changes to that handle
         
-        <h4>This is only working on windows; still tryin to figure out how to make it work on linux - I just don't know how Â¯\_('_')_/Â¯ -</h4>
+        <h4>This is only working on windows; still tryin to figure out how to make it work on linux - I just don't know how ¯\_('_')_/¯ -</h4>
         <h3>Install</h3>
             <ol>
                 <li>First make sure you got python 3.x and pip installed</li>
@@ -32,4 +32,3 @@ Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
-Description-Content-Type: text/markdown

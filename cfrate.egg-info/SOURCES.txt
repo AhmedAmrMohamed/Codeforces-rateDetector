@@ -1,6 +1,7 @@
 README.md
 setup.py
 cfrate/__init__.py
+cfrate/browserhandles.py
 cfrate/command.py
 cfrate/filehandles.py
 cfrate/ts.py
