@@ -13,7 +13,6 @@ class cfrate:
         if len(os.sys.argv)==3:
             self.handle = os.sys.argv[2].lower()
         self.setup()
-        print('fuck',self.id)
         if self.id == '-1':
             self.change()
             quit()
