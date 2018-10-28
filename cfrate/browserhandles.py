@@ -28,10 +28,13 @@ class main_class(cfrate):
 
     def setup(self):
         self.file = "url.txt"
-        # print(self.path)
-        path = self.path.split('\\')
+        if '\\' in self.path:
+            slash = '\\'
+        else:
+            slash ='/'
+        path = self.path.split(slash)
         path.pop()
-        self.path = '\\'.join(path)
+        self.path = slash.join(path)
         # print(self.path)
         os.chdir(self.path)
         self.url = self.readtxt()

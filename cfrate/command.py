@@ -5,4 +5,7 @@ def main():
     if 'win' in platform:
         from cfrate.filehandles import main
         main()
+    else:
+        from cfrate.browswerhandles import main
+        main()
 
